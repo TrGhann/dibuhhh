@@ -5,22 +5,22 @@ local WindUI = loadstring(game:HttpGet(
 
 -- Create Window
 local Window = WindUI:CreateWindow({
-    Title = "Jazradd's Library",
-    Icon = "solar:accessibility-bold",
-    Author = "made by Jazradd",
-    Folder = "JazraddLibrary",
-    Theme = "Dark",
+    Title = "Adopt Me | Jaraddz Hub",
+    Icon = "laptop",
+    Author = "made by Jaraddz",
+    Folder = "JaraddzHubAdoptMe",
     Size = UDim2.fromOffset(520, 420),
-    SideBarWidth = 150
-})
+    Transparent = true,
+    Theme = "Dark",
 
-Window:SetToggleKey(Enum.KeyCode.K)
+    User = {
+        Enabled = true,
+        Callback = function() end,
+        Anonymous = false
+    },
 
-Window:EditOpenButton({
-    Title = "Open Library",
-    Icon = "home",
-    Enabled = true,
-    Draggable = true
+    SideBarWidth = 150,
+    ScrollBarEnabled = true
 })
 
 -------------------------------------------------------
@@ -37,6 +37,7 @@ local ADMTab = Window:Tab({Title = "ADM", Icon = "geist:window"})
 
 local Scripts = {
     ["DarkScript Spawner"] = { script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/veryimportantrr/x/refs/heads/main/gag_visual.lua"))()', section = "Other" },
+    ["Minigames Autofarm"] = { script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi"))()', section = "ADM" },
     ["GingerBread Farm"] = { script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee"))()', section = "ADM" },
     ["House ClonerV2"] = { script = 'loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222"))()', section = "ADM" },
     ["Ronix Hub"] = { script = 'loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua"))()', section = "Other" },
