@@ -23,13 +23,30 @@ local Window = WindUI:CreateWindow({
     ScrollBarEnabled = true
 })
 
+task.spawn(function()
+    local CoreGui = game:GetService("CoreGui")
+
+    local function nukeLeave(btn)
+        if not btn then return end
+        if btn.Name == "DontLeaveGameButton" or btn.Name == "LeaveGameButton" then
+            pcall(function() btn:Destroy() end)
+        end
+    end
+ ipairs(CoreGui:GetDescendants()) do
+        nukeLeave(d)
+    end
+ CoreGui.DescendantAdded:Connect(function(inst)
+        nukeLeave(inst)
+    end)
+end)
+
 -------------------------------------------------------
 --                TABS
 -------------------------------------------------------
 
-local OtherTab = Window:Tab({Title = "Other", Icon = "geist:window"})
-local MM2Tab = Window:Tab({Title = "MM2", Icon = "geist:window"})
-local ADMTab = Window:Tab({Title = "ADM", Icon = "geist:window"})
+local OtherTab = Window:Tab({Title = "Other", Icon = "eye"})
+local MM2Tab = Window:Tab({Title = "MM2", Icon = "skull"})
+local ADMTab = Window:Tab({Title = "ADM", Icon = "heart"})
 
 -------------------------------------------------------
 --                SCRIPTS
