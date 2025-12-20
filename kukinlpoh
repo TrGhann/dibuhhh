@@ -21,10 +21,10 @@ local WindUI = loadstring(game:HttpGet(
 -- CREATE WINDOW
 -------------------------------------------------------
 local Window = WindUI:CreateWindow({
-    Title = "Adopt Me | Jaraddz Hub",
+    Title = "Adopt Me | Jaradz Hub",
     Icon = "laptop",
-    Author = "made by Jaraddz",
-    Folder = "JaraddzHubAdoptMe",
+    Author = "made by Jaradz",
+    Folder = "JaradzHubAdoptMe",
     Size = UDim2.fromOffset(520, 420),
     Transparent = true,
     Theme = "Dark",
@@ -236,7 +236,7 @@ DiscordTab:Button({
 -- LOADED NOTIFICATION
 -------------------------------------------------------
 WindUI:Notify({
-    Title = "Jaraddz Hub Loaded",
+    Title = "Jaradz Hub Loaded",
     Content = "Everything loaded successfully",
     Icon = "check",
     Duration = 3
