@@ -21,17 +21,24 @@ local WindUI = loadstring(game:HttpGet(
 -- CREATE WINDOW
 -------------------------------------------------------
 local Window = WindUI:CreateWindow({
-    Title = "Adopt Me | Jazrad Hub",
+    Title = "Adopt Me | Kuni Hub",
     Icon = "laptop",
-    Author = "made by Jazrad",
-    Folder = "JazradHubAdoptMe",
+    Author = "made by kuni",
+    Folder = "KuniHubAdoptMe",
     Size = UDim2.fromOffset(520, 420),
     Transparent = true,
     Theme = "Dark",
+
+    -- 👉 ITO YON
+    User = {
+        Enabled = true,
+        Callback = function() end,
+        Anonymous = false
+    },
+
     SideBarWidth = 150,
     ScrollBarEnabled = true
 })
-
 -------------------------------------------------------
 -- REMOVE LEAVE GAME BUTTONS
 -------------------------------------------------------
