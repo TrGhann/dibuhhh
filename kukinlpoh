@@ -14,16 +14,16 @@ local localPlayer = Players.LocalPlayer
 -- LOAD WINDUI
 -------------------------------------------------------
 local WindUI = loadstring(game:HttpGet(
-    "https://raw.githubusercontent.com/TrGhann/windgui/refs/heads/main/lua"
+    "https://raw.githubusercontent.com/Footagesus/WindUI/main/dist/main.lua"
 ))()
 
 -------------------------------------------------------
 -- CREATE WINDOW
 -------------------------------------------------------
 local Window = WindUI:CreateWindow({
-    Title = "Adopt Me | Kuni Hub",
+    Title = "Library | Jazrad Hub",
     Icon = "laptop",
-    Author = "made by kuni",
+    Author = "made by Jazrad",
     Folder = "KuniHubAdoptMe",
     Size = UDim2.fromOffset(520, 420),
     Transparent = true,
