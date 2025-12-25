@@ -95,6 +95,7 @@ local Scripts = {
     ["House ClonerV2"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222"))()', section="ADM" },
     ["Instant Hatch | Instant Mega Neon"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME"))()', section="ADM" },
     ["AutoFarm GingerBread"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread"))()', section="ADM" },
+    ["Pet Spawner (Tradeable)"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asdawdads"))()', section="ADM" },
     ["AdoptMe FreezeTrade"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Trade%20freeze"))()', section="ADM" },
     ["House Cloner"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse"))()', section="ADM" },
     ["ProdigyX"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg"))()', section="ADM" },
