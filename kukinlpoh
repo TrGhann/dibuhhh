@@ -236,7 +236,7 @@ DiscordTab:Button({
     Title = "Copy Discord Invite",
     Icon = "users",
     Callback = function()
-        setclipboard("https://discord.gg/fvWTbRZFTV")
+        setclipboard("https://discord.gg/pornhub")
     end
 })
 
