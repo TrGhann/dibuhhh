@@ -29,7 +29,6 @@ local Window = WindUI:CreateWindow({
     Transparent = true,
     Theme = "Dark",
 
-    -- 👉 ITO YON
     User = {
         Enabled = true,
         Callback = function() end,
@@ -39,6 +38,14 @@ local Window = WindUI:CreateWindow({
     SideBarWidth = 150,
     ScrollBarEnabled = true
 })
+
+Window:Tag({
+    Title = "v1.7.0",
+    Icon = "github",
+    Color = Color3.fromHex("#00BFFF"),
+    Radius = 13,
+})
+
 -------------------------------------------------------
 -- REMOVE LEAVE GAME BUTTONS
 -------------------------------------------------------
@@ -59,48 +66,156 @@ end)
 -------------------------------------------------------
 -- TABS
 -------------------------------------------------------
-local OtherTab   = Window:Tab({Title = "Other", Icon = "eye"})
-local MM2Tab     = Window:Tab({Title = "MM2", Icon = "skull"})
-local ADMTab     = Window:Tab({Title = "ADM", Icon = "heart"})
-local MiscTab    = Window:Tab({Title = "Misc", Icon = "settings"})
-local DiscordTab = Window:Tab({Title = "Discord", Icon = "users"})
+local DashboardTab = Window:Tab({ Title = "🎮 Dashboard" })
+local OtherTab = Window:Tab({ Title = "👁 Other Games" })
+local MM2Tab   = Window:Tab({ Title = "🔪 MM2" })
+local ADMTab   = Window:Tab({ Title = "❤️ AdoptMe" })
+local MiscTab  = Window:Tab({ Title = "⚙️ Misc" })
+local AboutTab = Window:Tab({ Title = "ℹ️ About" })
 
 -------------------------------------------------------
--- FULL SCRIPT LIST (ORIGINAL – NOT CUT)
+-- GAMING DASHBOARD TAB
+-------------------------------------------------------
+local startTime = tick()
+local scriptsLoadedCount = 0
+
+local function getPlayTime()
+    local elapsed = tick() - startTime
+    local hours = math.floor(elapsed / 3600)
+    local minutes = math.floor((elapsed % 3600) / 60)
+    local seconds = math.floor(elapsed % 60)
+    return string.format("%02d:%02d:%02d", hours, minutes, seconds)
+end
+
+local function getServerRegion()
+    local success, ping = pcall(function()
+        return game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValue()
+    end)
+    
+    if not success then return "🟡 Unknown" end
+    
+    if ping < 50 then return "🟢 Excellent"
+    elseif ping < 100 then return "🟡 Good"
+    elseif ping < 150 then return "🟠 Fair"
+    else return "🔴 Poor" end
+end
+
+DashboardTab:Paragraph({
+    Title = "🎮 Gaming Dashboard",
+    Desc = "Real-time stats and quick access controls",
+    Image = "activity",
+    Color = "Blue"
+})
+
+DashboardTab:Section({ Title = "📊 Session Stats" })
+
+local serverInfoParagraph = DashboardTab:Paragraph({
+    Title = "Server Information",
+    Desc = "Server ID: " .. game.JobId:sub(1, 16) .. "...\n" ..
+           "Players: " .. #Players:GetPlayers() .. "/" .. Players.MaxPlayers .. "\n" ..
+           "Place ID: " .. game.PlaceId .. "\n" ..
+           "Connection: " .. getServerRegion(),
+    Color = "Green"
+})
+
+local sessionParagraph = DashboardTab:Paragraph({
+    Title = "Your Session",
+    Desc = "Play Time: " .. getPlayTime() .. "\n" ..
+           "Scripts Loaded: " .. scriptsLoadedCount .. "\n" ..
+           "Hub Version: v1.7.0\n" ..
+           "Status: Active ✅",
+    Color = "Blue"
+})
+
+-- Update stats every second
+task.spawn(function()
+    while task.wait(1) do
+        pcall(function()
+            sessionParagraph:Update({
+                Desc = "Play Time: " .. getPlayTime() .. "\n" ..
+                       "Scripts Loaded: " .. scriptsLoadedCount .. "\n" ..
+                       "Hub Version: v1.7.0\n" ..
+                       "Status: Active ✅"
+            })
+            
+            serverInfoParagraph:Update({
+                Desc = "Server ID: " .. game.JobId:sub(1, 16) .. "...\n" ..
+                       "Players: " .. #Players:GetPlayers() .. "/" .. Players.MaxPlayers .. "\n" ..
+                       "Place ID: " .. game.PlaceId .. "\n" ..
+                       "Connection: " .. getServerRegion()
+            })
+        end)
+    end
+end)
+
+DashboardTab:Section({ Title = "🎯 Popular Scripts" })
+
+DashboardTab:Button({
+    Title = "House ClonerV2",
+    Desc = "Clone house builds V2 • ✅ Working",
+    Icon = "trending-up",
+    Callback = function()
+        scriptsLoadedCount = scriptsLoadedCount + 1
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222"))()
+    end
+})
+
+DashboardTab:Button({
+    Title = "Minigames Autofarm",
+    Desc = "Auto complete minigames • ✅ Working",
+    Icon = "trending-up",
+    Callback = function()
+        scriptsLoadedCount = scriptsLoadedCount + 1
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi"))()
+    end
+})
+
+DashboardTab:Button({
+    Title = "GingerBread Farm",
+    Desc = "Farm gingerbread cookies • ✅ Working",
+    Icon = "trending-up",
+    Callback = function()
+        scriptsLoadedCount = scriptsLoadedCount + 1
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee"))()
+    end
+})
+
+-------------------------------------------------------
+-- FULL SCRIPT LIST
 -------------------------------------------------------
 local Scripts = {
-    ["DarkScript Spawner"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/veryimportantrr/x/refs/heads/main/gag_visual.lua"))()', section="Other" },
-    ["Ronix Hub"] = { script='loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua"))()', section="Other" },
-    ["Lunor"] = { script='loadstring(game:HttpGet("https://lunor.dev/loader"))()', section="Other" },
-    ["Thunder Z Hub"] = { script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua'))()", section="Other" },
-    ["Quantum Hub (Keyless)"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()', section="Other" },
-    ["Limit Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua"))()', section="Other" },
-    ["Speed Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua",true))()', section="Other" },
-    ["All-in-one Script"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Jaradscript/refs/heads/main/jarapd%20script"))()', section="Other" },
-    ["ZysumeHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume"))()', section="Other" },
-    ["Than Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()', section="Other" },
-    ["Dupe Remover"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/DupeRemover"))()', section="Other" },
-    ["Pet Kg Changer"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/PetWeightchanger"))()', section="Other" },
-    ["Freeze Trade"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Trade%20freeze"))()', section="Other" },
-    ["Mooncat Bugger"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Mooncat"))()', section="Other" },
-    ["PVB DUPER"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/pvb%20chrg"))()', section="Other" },
+    ["DarkScript Spawner"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/veryimportantrr/x/refs/heads/main/gag_visual.lua"))()', section="Other", desc="Visual spawner for various games", status="✅ Working" },
+    ["Ronix Hub"] = { script='loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua"))()', section="Other", desc="Multi-game hub with various features", status="✅ Working" },
+    ["Lunor"] = { script='loadstring(game:HttpGet("https://lunor.dev/loader"))()', section="Other", desc="Premium universal hub", status="✅ Working" },
+    ["Thunder Z Hub"] = { script="loadstring(game:HttpGet('https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua'))()", section="Other", desc="Thunder Z universal script hub", status="✅ Working" },
+    ["Quantum Hub (Keyless)"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua"))()', section="Other", desc="Keyless quantum hub", status="✅ Working" },
+    ["Limit Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua"))()', section="Other", desc="Limit hub with multiple game support", status="✅ Working" },
+    ["Speed Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua",true))()', section="Other", desc="Fast-loading universal hub", status="✅ Working" },
+    ["All-in-one Script"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Jaradscript/refs/heads/main/jarapd%20script"))()', section="Other", desc="Collection of useful scripts", status="✅ Working" },
+    ["ZysumeHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume"))()', section="Other", desc="Zysume multi-purpose hub", status="✅ Working" },
+    ["Than Hub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1"))()', section="Other", desc="Than hub utilities", status="✅ Working" },
+    ["Dupe Remover"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/DupeRemover"))()', section="Other", desc="Remove duplicate pets/items", status="✅ Working" },
+    ["Pet Kg Changer"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/PetWeightchanger"))()', section="Other", desc="Change pet weight values", status="✅ Working" },
+    ["Freeze Trade"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Trade%20freeze"))()', section="Other", desc="Freeze trading screen", status="✅ Working" },
+    ["Mooncat Bugger"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Mooncat"))()', section="Other", desc="Mooncat exploit tool", status="✅ Working" },
+    ["PVB DUPER"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/pvb%20chrg"))()', section="Other", desc="PVB duplication script", status="⚠️ Use Caution" },
 
-    ["BeeconHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub"))()', section="MM2" },
-    ["Inf Snowflakes"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/inffinfnff"))()', section="MM2" },
-    ["Radeon Hub"] = { script='loadstring(game:HttpGet("https://pastebin.com/raw/v1LKQGxN",true))()', section="MM2" },
-    ["Echelon"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/echelonvanta/Scripts/refs/heads/main/Loader"))()', section="MM2" },
+    ["BeeconHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub"))()', section="MM2", desc="Complete MM2 hub with ESP, Auto, etc", status="✅ Working" },
+    ["Inf Snowflakes"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/inffinfnff"))()', section="MM2", desc="Infinite snowflakes farm", status="✅ Working" },
+    ["Radeon Hub"] = { script='loadstring(game:HttpGet("https://pastebin.com/raw/v1LKQGxN",true))()', section="MM2", desc="Radeon MM2 features", status="✅ Working" },
+    ["Echelon"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/echelonvanta/Scripts/refs/heads/main/Loader"))()', section="MM2", desc="Echelon MM2 script", status="✅ Working" },
 
-    ["Minigames Autofarm"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi"))()', section="ADM" },
-    ["GingerBread Farm"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee"))()', section="ADM" },
-    ["House ClonerV2"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222"))()', section="ADM" },
-    ["Instant Hatch | Instant Mega Neon"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME"))()', section="ADM" },
-    ["AutoFarm GingerBread"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread"))()', section="ADM" },
-    ["Pet Spawner (Tradeable)"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asdawdads"))()', section="ADM" },
-    ["AdoptMe FreezeTrade"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Trade%20freeze"))()', section="ADM" },
-    ["House Cloner"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse"))()', section="ADM" },
-    ["ProdigyX"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg"))()', section="ADM" },
-    ["AdoptMe JazradHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME"))()', section="ADM" },
-    ["MM2 & ADM AutoFarm"] = { script='loadstring(game:HttpGet("http://109.71.240.235:3910/cdn/visual.luau"))()', section="ADM" },
+    ["Minigames Autofarm"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi"))()', section="ADM", desc="Auto complete minigames", status="✅ Working" },
+    ["GingerBread Farm"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee"))()', section="ADM", desc="Farm gingerbread cookies", status="✅ Working" },
+    ["House ClonerV2"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222"))()', section="ADM", desc="Clone house builds V2", status="✅ Working" },
+    ["Instant Hatch | Instant Mega Neon"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME"))()', section="ADM", desc="Instant egg hatch and mega neon making", status="✅ Working" },
+    ["AutoFarm GingerBread"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread"))()', section="ADM", desc="Alternative gingerbread farmer", status="✅ Working" },
+    ["Pet Spawner (Tradeable)"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asdawdads"))()', section="ADM", desc="Spawn tradeable pets", status="⚠️ Use Caution" },
+    ["AdoptMe FreezeTrade"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Trade%20freeze"))()', section="ADM", desc="Freeze trading screen", status="✅ Working" },
+    ["House Cloner"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse"))()', section="ADM", desc="Clone house builds", status="✅ Working" },
+    ["ProdigyX"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg"))()', section="ADM", desc="ProdigyX AdoptMe features", status="✅ Working" },
+    ["AdoptMe JazradHub"] = { script='loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME"))()', section="ADM", desc="Complete AdoptMe hub", status="✅ Working" },
+    ["MM2 & ADM AutoFarm"] = { script='loadstring(game:HttpGet("http://109.71.240.235:3910/cdn/visual.luau"))()', section="ADM", desc="Combined autofarm for MM2 and AdoptMe", status="✅ Working" },
 }
 
 local function AddScripts(tab, section)
@@ -108,8 +223,10 @@ local function AddScripts(tab, section)
         if data.section == section then
             tab:Button({
                 Title = name,
+                Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
                 Icon = "play",
                 Callback = function()
+                    scriptsLoadedCount = scriptsLoadedCount + 1
                     loadstring(data.script)()
                 end
             })
@@ -117,12 +234,155 @@ local function AddScripts(tab, section)
     end
 end
 
-AddScripts(OtherTab,"Other")
+-- Other Games Tab with Sections
+OtherTab:Paragraph({
+    Title = "Universal & Tools",
+    Desc = "Universal hubs and utility scripts",
+    Image = "package"
+})
+
+OtherTab:Section({ Title = "🌟 Universal Hubs" })
+for name, data in pairs(Scripts) do
+    if data.section == "Other" and (name:find("Hub") or name:find("Lunor")) then
+        OtherTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "globe",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
+
+OtherTab:Section({ Title = "🔧 Utility Tools" })
+for name, data in pairs(Scripts) do
+    if data.section == "Other" and not (name:find("Hub") or name:find("Lunor")) then
+        OtherTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "globe",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
+
+-- MM2 Tab
+MM2Tab:Paragraph({
+    Title = "Murder Mystery 2",
+    Desc = "Complete MM2 script collection",
+    Image = "crosshair"
+})
+
 AddScripts(MM2Tab,"MM2")
-AddScripts(ADMTab,"ADM")
+
+-- AdoptMe Tab with Sections
+ADMTab:Paragraph({
+    Title = "Adopt Me Scripts",
+    Desc = "AutoFarms, trading, building, and more",
+    Image = "heart"
+})
+
+ADMTab:Section({ Title = "🌾 AutoFarm Scripts" })
+for name, data in pairs(Scripts) do
+    if data.section == "ADM" and (name:find("Autofarm") or name:find("Farm") or name:find("AutoFarm")) then
+        ADMTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "trending-up",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
+
+ADMTab:Section({ Title = "🏠 Building & Housing" })
+for name, data in pairs(Scripts) do
+    if data.section == "ADM" and name:find("House") then
+        ADMTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "trending-up",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
+
+ADMTab:Section({ Title = "🐾 Pet Scripts" })
+for name, data in pairs(Scripts) do
+    if data.section == "ADM" and (name:find("Pet") or name:find("Hatch") or name:find("Neon")) then
+        ADMTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "trending-up",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
+
+ADMTab:Section({ Title = "💱 Trading & Other" })
+for name, data in pairs(Scripts) do
+    if data.section == "ADM" and not (name:find("Farm") or name:find("House") or name:find("Pet") or name:find("Hatch") or name:find("Neon")) then
+        ADMTab:Button({
+            Title = name,
+            Desc = (data.desc or "No description") .. " • " .. (data.status or "Unknown"),
+            Icon = "trending-up",
+            Callback = function()
+                scriptsLoadedCount = scriptsLoadedCount + 1
+                loadstring(data.script)()
+            end
+        })
+    end
+end
 
 -------------------------------------------------------
--- MISC TAB (FULL – NOTHING REMOVED)
+-- ABOUT TAB
+-------------------------------------------------------
+AboutTab:Paragraph({
+    Title = "About Jazrad Hub",
+    Desc =
+        "Universal script hub for multiple popular Roblox games.\n" ..
+        "Optimized for both Mobile (Android/iOS) and PC with a modern WindUI design.",
+    Image = "info"
+})
+
+AboutTab:Paragraph({
+    Title = "✨ Features",
+    Desc =
+        "• Supports a wide variety of games\n" ..
+        "• Simple and well-structured menu\n" ..
+        "• Fast script loading with one click\n" ..
+        "• Optimized for mobile and touch devices\n" ..
+        "• Clean and modern WindUI design\n" ..
+        "• Automatically loads compatible scripts\n" ..
+        "• Smooth minimize and expand option\n" ..
+        "• NEW: Live Gaming Dashboard with stats",
+    Image = "star"
+})
+
+AboutTab:Paragraph({
+    Title = "📝 How to Use",
+    Desc =
+        "1. Choose your desired game\n" ..
+        "2. Click the load button\n" ..
+        "3. Enjoy the features!",
+    Image = "edit"
+})
+
+-------------------------------------------------------
+-- MISC TAB
 -------------------------------------------------------
 MiscTab:Paragraph({
     Title = "Miscellaneous Features",
@@ -177,21 +437,6 @@ MiscTab:Toggle({
 })
 
 MiscTab:Button({
-    Title = "Make All Pets Mega Neon",
-    Icon = "sparkles",
-    Callback = function()
-        pcall(function()
-            local ClientData = require(ReplicatedStorage.ClientModules.Core.ClientData)
-            for _, pet in pairs(ClientData.get_data()[tostring(localPlayer)].inventory.pets) do
-                pet.properties.mega_neon = true
-                pet.properties.rideable = true
-                pet.properties.flyable = true
-            end
-        end)
-    end
-})
-
-MiscTab:Button({
     Title = "Rejoin Server",
     Icon = "refresh-cw",
     Callback = function()
@@ -224,21 +469,90 @@ MiscTab:Paragraph({
 })
 
 -------------------------------------------------------
--- DISCORD TAB
+-- INFO TAB
 -------------------------------------------------------
-DiscordTab:Paragraph({
-    Title = "Join Our Discord!",
-    Desc = "Click the button below to copy the invite link",
-    Image = "users",
+local InfoTab = Window:Tab({
+    Title = "❗ Info"
+})
+
+InfoTab:Paragraph({
+    Title = "Jazrad Hub",
+    Desc =
+        "Version: v1.7.0\n" ..
+        "Status: Stable\n" ..
+        "UI Library: WindUI\n" ..
+        "Last Update: " .. os.date("%B %d, %Y"),
+    Image = "info",
     Color = "Blue"
 })
 
-DiscordTab:Button({
-    Title = "Copy Discord Invite",
-    Icon = "users",
+InfoTab:Paragraph({
+    Title = "Credits",
+    Desc =
+        "Developer: Jazrad\n" ..
+        "Scripting: Jazrad\n" ..
+        "UI: WindUI",
+    Image = "star",
+    Color = "Green"
+})
+
+InfoTab:Button({
+    Title = "Copy Hub Name",
+    Icon = "clipboard",
     Callback = function()
-        setclipboard("https://discord.gg/pornhub")
+        setclipboard("Jazrad Hub")
     end
+})
+
+-------------------------------------------------------
+-- SOCIALS TAB
+-------------------------------------------------------
+local SocialsTab = Window:Tab({
+    Title = "🌐 Community"
+})
+
+SocialsTab:Paragraph({
+    Title = "Community & Support",
+    Desc = "Stay connected with Jazrad Hub",
+    Image = "users"
+})
+
+SocialsTab:Button({
+    Title = "Copy Discord Invite",
+    Icon = "message-circle",
+    Callback = function()
+        setclipboard("https://discord.gg/YOUR_INVITE")
+    end
+})
+
+SocialsTab:Button({
+    Title = "More Scripts",
+    Icon = "code",
+    Callback = function()
+        setclipboard("https://github.com/YourUsername")
+    end
+})
+
+SocialsTab:Button({
+    Title = "YouTube Channel",
+    Icon = "youtube",
+    Callback = function()
+        setclipboard("https://youtube.com/@WhosJaraddd")
+    end
+})
+
+SocialsTab:Button({
+    Title = "TikTok Profile",
+    Icon = "music",
+    Callback = function()
+        setclipboard("https://tiktok.com/@ikikukkk")
+    end
+})
+
+SocialsTab:Paragraph({
+    Title = "Credits",
+    Desc = "Developer: Jazrad\nUI: WindUI",
+    Image = "star"
 })
 
 -------------------------------------------------------
@@ -246,7 +560,7 @@ DiscordTab:Button({
 -------------------------------------------------------
 WindUI:Notify({
     Title = "Jazrad Hub Loaded",
-    Content = "Everything loaded successfully",
+    Content = "v1.7.0 - Everything loaded successfully",
     Icon = "check",
     Duration = 3
 })
