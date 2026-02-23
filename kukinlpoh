@@ -1,4 +1,41 @@
 -------------------------------------------------------
+-- ANTI HTTP SPY PROTECTION
+-------------------------------------------------------
+local function antiHTTPSpy()
+    local function isHooked(func)
+        if not func or type(func) ~= "function" then return false end
+        local success, info = pcall(debug.getinfo, func)
+        if not success then return true end
+        if info.what ~= "C" then return true end
+        if info.source and not info.source:match("^%[C%]") and not info.source:match("^=") and not info.source:match("^@") then return true end
+        return false
+    end
+
+    -- Check if common HTTP functions are hooked
+    local http_globals = {"request","http_request","syn_request"}
+    for _, global_name in ipairs(http_globals) do
+        local ok, func = pcall(function() return _G[global_name] end)
+        if ok and func and type(func) == "function" and isHooked(func) then
+            return false
+        end
+    end
+
+    -- Check HttpService methods
+    local http_ok = pcall(function()
+        local HttpService = game:GetService("HttpService")
+        for _, method in ipairs({"GetAsync","PostAsync","RequestAsync"}) do
+            local func = HttpService[method]
+            if func and isHooked(func) then error("HOOKED") end
+        end
+    end)
+    if not http_ok then return false end
+
+    return true
+end
+
+if not antiHTTPSpy() then return end
+
+-------------------------------------------------------
 -- LOAD WINDUI
 -------------------------------------------------------
 local WindUI
