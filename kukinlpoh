@@ -389,7 +389,6 @@ do
     CreateScriptButton(ADMTab, "AutoFarm GingerBread (Alt)",        "Alternative gingerbread farm",           "repeat",     "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread", "ADM")
     CreateScriptButton(ADMTab, "Heart Autofarm",                    "Farm Valentine Minigames",               "heart",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Heart",           "ADM")
     CreateScriptButton(ADMTab, "ProdigyX",                          "ProdigyX AdoptMe features",              "star",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg",         "ADM")
-    CreateScriptButton(ADMTab, "Dupe Remover",                      "Remove duplicate pets/items",            "trash-2",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/DupeRemover",     "ADM")
     CreateScriptButton(ADMTab, "House Cloner",                      "Clone house builds",                     "copy",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse",       "ADM")
     CreateScriptButton(ADMTab, "AdoptMe JazradHub",                 "Complete AdoptMe hub",                   "package",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME",      "ADM")
 
