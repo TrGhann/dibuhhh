@@ -128,27 +128,66 @@ do
 
     UniversalTab:Section({ Title = "Universal Scripts", TextSize = 18 })
 
-    CreateScriptButton(UniversalTab, "Infinite Yield",        "Admin commands script",                  "terminal",      "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",                            "Universal")
-    CreateScriptButton(UniversalTab, "Dex Explorer",          "Game explorer",                          "search",        "https://raw.githubusercontent.com/infyiff/backup/main/dex.lua",                                   "Universal")
-    CreateScriptButton(UniversalTab, "Universal Aimbot",      "Good aimbot for fps games",              "crosshair",     "https://raw.githubusercontent.com/Sabscripterhahaha/Universal/refs/heads/main/Universal",         "Universal")
-    CreateScriptButton(UniversalTab, "Hitbox Expander",       "Expands hitboxes, useful for fps games", "maximize",      "https://pastefy.app/vnXSigC1/raw",                                                                "Universal")
-    CreateScriptButton(UniversalTab, "Universal ESP",         "See through walls, get others' location","eye",           "https://pastefy.app/KMJTFNsg/raw",                                                                "Universal")
-    CreateScriptButton(UniversalTab, "Cryonix Hub",           "Lots of scripts",                        "layers",        "https://raw.githubusercontent.com/idcgj36/CryonixHub/refs/heads/main/Main.lua",                   "Universal")
-    CreateScriptButton(UniversalTab, "Chat Bypasser",         "Bypasses the chat filters",              "message-square","https://raw.githubusercontent.com/2EzMyBoi/Roblox-Scripts/refs/heads/main/UselessBypasser",       "Universal")
-    CreateScriptButton(UniversalTab, "Ronix Hub",             "Multi-game hub with various features",   "box",           "https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua",                    "Universal")
-    CreateScriptButton(UniversalTab, "Lunor",                 "Premium universal hub",                  "star",          "https://lunor.dev/loader",                                                                         "Universal")
-    CreateScriptButton(UniversalTab, "Thunder Z Hub",         "Thunder Z universal script hub",         "zap",           "https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua",            "Universal")
-    CreateScriptButton(UniversalTab, "Quantum Hub (Keyless)", "Keyless quantum hub",                    "cpu",           "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua",            "Universal")
-    CreateScriptButton(UniversalTab, "Speed Hub",             "Fast-loading universal hub",             "wind",          "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua",                 "Universal")
-    CreateScriptButton(UniversalTab, "ZysumeHub",             "Zysume multi-purpose hub",               "package",       "https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume",              "Universal")
-    CreateScriptButton(UniversalTab, "Limit Hub",             "Limit hub with multiple game support",   "sliders",       "https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua",       "Universal")
-    CreateScriptButton(UniversalTab, "Than Hub",              "Than hub utilities",                     "tool",          "https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1",                         "Universal")
-    CreateScriptButton(UniversalTab, "DarkScript Spawner",    "Visual spawner for various games",       "monitor",       "https://raw.githubusercontent.com/veryimportantrr/x/refs/heads/main/gag_visual.lua",              "Universal")
-    CreateScriptButton(UniversalTab, "All-in-one Script",     "Collection of useful scripts",           "archive",       "https://raw.githubusercontent.com/jazzedd/Jaradscript/refs/heads/main/jarapd%20script",           "Universal")
-    CreateScriptButton(UniversalTab, "Pet Kg Changer",        "Change pet weight values",               "activity",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/PetWeightchanger",              "Universal")
-    CreateScriptButton(UniversalTab, "Mooncat Bugger",        "Mooncat exploit tool",                   "moon",          "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Mooncat",                       "Universal")
-    CreateScriptButton(UniversalTab, "PVB DUPER",             "PVB duplication script (Use Caution)",   "alert-triangle","https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/pvb%20chrg",                    "Universal")
-    CreateScriptButton(UniversalTab, "Dandy's World [ALPHA]", "Dandy's World alpha script",             "ghost",         "https://raw.githubusercontent.com/Urbanstormm/Project-Stark/main/Main.lua",                       "Universal")
+    CreateScriptButton(UniversalTab, "Infinite Yield",        "Admin commands script",                  "terminal",       "https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source",                          "Universal")
+    CreateScriptButton(UniversalTab, "Dex Explorer",          "Game explorer",                          "search",         "https://raw.githubusercontent.com/infyiff/backup/main/dex.lua",                                 "Universal")
+    CreateScriptButton(UniversalTab, "Universal Aimbot",      "Good aimbot for fps games",              "crosshair",      "https://raw.githubusercontent.com/Sabscripterhahaha/Universal/refs/heads/main/Universal",       "Universal")
+    CreateScriptButton(UniversalTab, "Hitbox Expander",       "Expands hitboxes, useful for fps games", "maximize",       "https://pastefy.app/vnXSigC1/raw",                                                              "Universal")
+    CreateScriptButton(UniversalTab, "Universal ESP",         "See through walls, get others' location","eye",            "https://pastefy.app/KMJTFNsg/raw",                                                              "Universal")
+    CreateScriptButton(UniversalTab, "Cryonix Hub",           "Lots of scripts",                        "layers",         "https://raw.githubusercontent.com/idcgj36/CryonixHub/refs/heads/main/Main.lua",                 "Universal")
+    CreateScriptButton(UniversalTab, "Chat Bypasser",         "Bypasses the chat filters",              "message-square", "https://raw.githubusercontent.com/2EzMyBoi/Roblox-Scripts/refs/heads/main/UselessBypasser",     "Universal")
+    CreateScriptButton(UniversalTab, "Ronix Hub",             "Multi-game hub with various features",   "box",            "https://api.luarmor.net/files/v3/loaders/b44706178039e9b88c4d768d4d8b012f.lua",                  "Universal")
+    CreateScriptButton(UniversalTab, "Lunor",                 "Premium universal hub",                  "star",           "https://lunor.dev/loader",                                                                       "Universal")
+    CreateScriptButton(UniversalTab, "Thunder Z Hub",         "Thunder Z universal script hub",         "zap",            "https://raw.githubusercontent.com/ThundarZ/Welcome/refs/heads/main/Main/GaG/Main.lua",          "Universal")
+    CreateScriptButton(UniversalTab, "Quantum Hub (Keyless)", "Keyless quantum hub",                    "cpu",            "https://raw.githubusercontent.com/flazhy/QuantumOnyx/refs/heads/main/QuantumOnyx.lua",          "Universal")
+    CreateScriptButton(UniversalTab, "Speed Hub",             "Fast-loading universal hub",             "wind",           "https://raw.githubusercontent.com/AhmadV99/Speed-Hub-X/main/Speed%20Hub%20X.lua",               "Universal")
+    CreateScriptButton(UniversalTab, "ZysumeHub",             "Zysume multi-purpose hub",               "package",        "https://raw.githubusercontent.com/ZusumeHub/ZusumeHub/refs/heads/main/UpdateZysume",            "Universal")
+    CreateScriptButton(UniversalTab, "Limit Hub",             "Limit hub with multiple game support",   "sliders",        "https://raw.githubusercontent.com/FakeModz/LimitHub/refs/heads/main/LimitHub_Luarmor_E.lua",     "Universal")
+    CreateScriptButton(UniversalTab, "Than Hub",              "Than hub utilities",                     "tool",           "https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1",                       "Universal")
+    CreateScriptButton(UniversalTab, "DarkScript Spawner",    "Visual spawner for various games",       "monitor",        "https://raw.githubusercontent.com/veryimportantrr/x/refs/heads/main/gag_visual.lua",            "Universal")
+    CreateScriptButton(UniversalTab, "All-in-one Script",     "Collection of useful scripts",           "archive",        "https://raw.githubusercontent.com/jazzedd/Jaradscript/refs/heads/main/jarapd%20script",         "Universal")
+end
+
+-------------------------------------------------------
+-- ADM (ADOPT ME) TAB
+-------------------------------------------------------
+do
+    local ADMTab = ScriptsSection:Tab({
+        Title     = "🐾 Adopt Me",
+        Icon      = "gamepad-2",
+        IconColor = Pink,
+        IconShape = "Square",
+    })
+
+    ADMTab:Section({ Title = "Adopt Me Scripts", TextSize = 18 })
+
+    CreateScriptButton(ADMTab, "House Cloner",                          "House script",                           "home",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/housdc",          "ADM")
+    CreateScriptButton(ADMTab, "Minigames Autofarm",                "Auto complete minigames",                "gamepad-2", "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi",      "ADM")
+    CreateScriptButton(ADMTab, "GingerBread Farm",                  "Farm gingerbread cookies",               "cookie",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee",       "ADM")
+    CreateScriptButton(ADMTab, "House ClonerV2",                    "Clone house builds V2",                  "home",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222",  "ADM")
+    CreateScriptButton(ADMTab, "Instant Hatch | Instant Mega Neon", "Instant egg hatch and mega neon making", "zap",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME",     "ADM")
+    CreateScriptButton(ADMTab, "AutoFarm GingerBread (Alt)",        "Alternative gingerbread farm",           "repeat",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread", "ADM")
+    CreateScriptButton(ADMTab, "Heart Autofarm",                    "Farm Valentine Minigames",               "heart",     "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Heart",           "ADM")
+    CreateScriptButton(ADMTab, "ProdigyX",                          "ProdigyX AdoptMe features",              "star",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg",         "ADM")
+    CreateScriptButton(ADMTab, "House Cloner",                      "Clone house builds",                     "copy",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse",       "ADM")
+    CreateScriptButton(ADMTab, "AdoptMe JazradHub",                 "Complete AdoptMe hub",                   "package",   "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME",      "ADM")
+
+    ADMTab:Button({
+        Title = "Pet Spawner (Tradeable)",
+        Desc  = "Spawn tradeable pets • ⚠️ Use Caution",
+        Icon  = "sparkles",
+        Callback = function()
+            scriptsLoadedCount = scriptsLoadedCount + 1
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asdawdads"))()
+        end
+    })
+    ADMTab:Space()
+
+    ADMTab:Section({ Title = "More Scripts", TextSize = 18 })
+
+    CreateScriptButton(ADMTab, "(NEW) House Cloner",   "Clone houses! (NO KEY / KEYLESS)",     "copy",   "", "ADM")
+    CreateScriptButton(ADMTab, "(NEW) Pet Duplicator", "Duplicate your high tier pets!",        "layers", "", "ADM")
+    CreateScriptButton(ADMTab, "Rampage Hub (Key)",    "Autofarm, autominigames and much more", "zap",    "", "ADM")
+    CreateScriptButton(ADMTab, "Ragesploit Hub (Key)", "Autofarm, autominigames and much more", "shield", "", "ADM")
 end
 
 -------------------------------------------------------
@@ -156,26 +195,26 @@ end
 -------------------------------------------------------
 do
     local MM2Tab = ScriptsSection:Tab({
-        Title     = "🔪 MM2",
-        Icon      = "knife",
+        Title     = "🔪 MurderMystery2",
+        Icon      = "gamepad-2",
         IconColor = Red,
         IconShape = "Square",
     })
 
     MM2Tab:Section({ Title = "Murder Mystery 2 Scripts", TextSize = 18 })
 
-    CreateScriptButton(MM2Tab, "Vertex (BEST - Keyless)",   "The best complete MM2 script",              "crosshair",     "", "MM2")
-    CreateScriptButton(MM2Tab, "YARHM (Keyless)",           "MM2 Scripts, Aimbot, Universal Scripts",    "target",        "", "MM2")
-    CreateScriptButton(MM2Tab, "Kuni Hub (Keyless)",        "ESP, Auto Farm, Teleport & Weapon Spawner", "layers",        "", "MM2")
-    CreateScriptButton(MM2Tab, "Forge Hub (Key)",           "Script Hub full of features for MM2",       "hammer",        "", "MM2")
-    CreateScriptButton(MM2Tab, "Moon Deity (Key)",          "Script Hub full of features for MM2",       "moon",          "", "MM2")
-    CreateScriptButton(MM2Tab, "Sorlua Hub (Key)",          "Good aimbot for MM2",                       "zap",           "", "MM2")
-    CreateScriptButton(MM2Tab, "Syl Hub (Key)",             "A collection of useful MM2 scripts",        "list",          "", "MM2")
-    CreateScriptButton(MM2Tab, "BeeconHub",                 "MM2 hub with ESP, Auto, etc",               "radio",         "https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub",       "MM2")
-    CreateScriptButton(MM2Tab, "Inf Snowflakes",            "Infinite snowflakes farm",                  "snowflake",     "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/inffinfnff",     "MM2")
-    CreateScriptButton(MM2Tab, "Radeon Hub",                "Radeon MM2 paid features",                  "cpu",           "https://pastebin.com/raw/v1LKQGxN",                                                 "MM2")
-    CreateScriptButton(MM2Tab, "Echelon",                   "Echelon MM2 paid script",                   "shield",        "https://raw.githubusercontent.com/echelonvanta/Scripts/refs/heads/main/Loader",    "MM2")
-    CreateScriptButton(MM2Tab, "MM2 & ADM AutoFarm",        "Adopt Me & MM2 Autofarm",                   "refresh-cw",    "http://109.71.240.235:3910/cdn/visual.luau",                                       "MM2")
+    CreateScriptButton(MM2Tab, "Vertex (BEST - Keyless)",   "The best complete MM2 script",              "crosshair",  "", "MM2")
+    CreateScriptButton(MM2Tab, "YARHM (Keyless)",           "MM2 Scripts, Aimbot, Universal Scripts",    "target",     "", "MM2")
+    CreateScriptButton(MM2Tab, "Kuni Hub (Keyless)",        "ESP, Auto Farm, Teleport & Weapon Spawner", "layers",     "", "MM2")
+    CreateScriptButton(MM2Tab, "Forge Hub (Key)",           "Script Hub full of features for MM2",       "hammer",     "", "MM2")
+    CreateScriptButton(MM2Tab, "Moon Deity (Key)",          "Script Hub full of features for MM2",       "moon",       "", "MM2")
+    CreateScriptButton(MM2Tab, "Sorlua Hub (Key)",          "Good aimbot for MM2",                       "zap",        "", "MM2")
+    CreateScriptButton(MM2Tab, "Syl Hub (Key)",             "A collection of useful MM2 scripts",        "list",       "", "MM2")
+    CreateScriptButton(MM2Tab, "BeeconHub",                 "MM2 hub with ESP, Auto, etc",               "radio",      "https://raw.githubusercontent.com/BaconBossScript/BeeconHub/main/BeeconHub",    "MM2")
+    CreateScriptButton(MM2Tab, "Inf Snowflakes",            "Infinite snowflakes farm",                  "snowflake",  "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/inffinfnff",  "MM2")
+    CreateScriptButton(MM2Tab, "Radeon Hub",                "Radeon MM2 paid features",                  "cpu",        "https://pastebin.com/raw/v1LKQGxN",                                              "MM2")
+    CreateScriptButton(MM2Tab, "Echelon",                   "Echelon MM2 paid script",                   "shield",     "https://raw.githubusercontent.com/echelonvanta/Scripts/refs/heads/main/Loader", "MM2")
+    CreateScriptButton(MM2Tab, "MM2 & ADM AutoFarm",        "Adopt Me & MM2 Autofarm",                   "refresh-cw", "http://109.71.240.235:3910/cdn/visual.luau",                                    "MM2")
 
     -- =============================================
     -- MM2 WEAPON TOOLS
@@ -354,7 +393,7 @@ end
 do
     local BrainrotTab = ScriptsSection:Tab({
         Title     = "🧠 Steal A Brainrot",
-        Icon      = "zap",
+        Icon      = "gamepad-2",
         IconColor = Color3.fromHex("#9D4EDD"),
         IconShape = "Square",
     })
@@ -370,45 +409,115 @@ do
 end
 
 -------------------------------------------------------
--- ADM (ADOPT ME) TAB
+-- DRILL FOR BRAINROTS TAB
 -------------------------------------------------------
 do
-    local ADMTab = ScriptsSection:Tab({
-        Title     = "🐾 ADM",
-        Icon      = "heart",
-        IconColor = Pink,
+    local DrillTab = ScriptsSection:Tab({
+        Title     = "🔩 Drill for Brainrots",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#F97316"),
         IconShape = "Square",
     })
 
-    ADMTab:Section({ Title = "Adopt Me Scripts", TextSize = 18 })
+    DrillTab:Section({ Title = "Drill for Brainrots Scripts", TextSize = 18 })
 
-    CreateScriptButton(ADMTab, "Minigames Autofarm",                "Auto complete minigames",                "gamepad-2",  "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/gingigigi",      "ADM")
-    CreateScriptButton(ADMTab, "GingerBread Farm",                  "Farm gingerbread cookies",               "cookie",     "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asczxcee",       "ADM")
-    CreateScriptButton(ADMTab, "House ClonerV2",                    "Clone house builds V2",                  "home",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/house%20V2222",  "ADM")
-    CreateScriptButton(ADMTab, "Instant Hatch | Instant Mega Neon", "Instant egg hatch and mega neon making", "zap",        "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME",     "ADM")
-    CreateScriptButton(ADMTab, "AutoFarm GingerBread (Alt)",        "Alternative gingerbread farm",           "repeat",     "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ginger%20bread", "ADM")
-    CreateScriptButton(ADMTab, "Heart Autofarm",                    "Farm Valentine Minigames",               "heart",      "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Heart",           "ADM")
-    CreateScriptButton(ADMTab, "ProdigyX",                          "ProdigyX AdoptMe features",              "star",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/proidyg",         "ADM")
-    CreateScriptButton(ADMTab, "House Cloner",                      "Clone house builds",                     "copy",       "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/copyhouse",       "ADM")
-    CreateScriptButton(ADMTab, "AdoptMe JazradHub",                 "Complete AdoptMe hub",                   "package",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/ADOPT%20ME",      "ADM")
+    CreateScriptButton(DrillTab, "Drill for Brainrots", "Drill for Brainrots script", "tool", "https://raw.githubusercontent.com/unrexl/Scripts/refs/heads/main/Driller", "Drill for Brainrots")
+end
 
-    ADMTab:Button({
-        Title = "Pet Spawner (Tradeable)",
-        Desc  = "Spawn tradeable pets • ⚠️ Use Caution",
-        Icon  = "sparkles",
-        Callback = function()
-            scriptsLoadedCount = scriptsLoadedCount + 1
-            loadstring(game:HttpGet("https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/asdawdads"))()
-        end
+-------------------------------------------------------
+-- SOLS RNG TAB
+-------------------------------------------------------
+do
+    local SolsTab = ScriptsSection:Tab({
+        Title     = "🎲 Sols RNG",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#A855F7"),
+        IconShape = "Square",
     })
-    ADMTab:Space()
 
-    ADMTab:Section({ Title = "More Scripts", TextSize = 18 })
+    SolsTab:Section({ Title = "Sols RNG Scripts", TextSize = 18 })
 
-    CreateScriptButton(ADMTab, "(NEW) House Cloner",   "Clone houses! (NO KEY / KEYLESS)",    "copy",      "", "ADM")
-    CreateScriptButton(ADMTab, "(NEW) Pet Duplicator", "Duplicate your high tier pets!",       "layers",    "", "ADM")
-    CreateScriptButton(ADMTab, "Rampage Hub (Key)",    "Autofarm, autominigames and much more","zap",       "", "ADM")
-    CreateScriptButton(ADMTab, "Ragesploit Hub (Key)", "Autofarm, autominigames and much more","shield",    "", "ADM")
+    CreateScriptButton(SolsTab, "Sols RNG Egg Farm", "Auto egg farm for Sols RNG", "star", "https://raw.githubusercontent.com/iw4st/Scripts/refs/heads/main/solsrngeggfarm", "Sols RNG")
+end
+
+-------------------------------------------------------
+-- DIESEL N STEEL TAB
+-------------------------------------------------------
+do
+    local DieselTab = ScriptsSection:Tab({
+        Title     = "⚙️ Diesel N Steel",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#78716C"),
+        IconShape = "Square",
+    })
+
+    DieselTab:Section({ Title = "Diesel N Steel Scripts", TextSize = 18 })
+
+    CreateScriptButton(DieselTab, "Diesel N Steel", "Diesel N Steel script", "settings", "https://api.jnkie.com/api/v1/luascripts/public/a07a0120bcea50d37b629985fa3b4086661791d3a0eeef0ae9da3dbfd1ab145f/download", "Diesel N Steel")
+end
+
+-------------------------------------------------------
+-- ONE SCOPE TAB
+-------------------------------------------------------
+do
+    local OneScopeTab = ScriptsSection:Tab({
+        Title     = "🔭 One Scope",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#06B6D4"),
+        IconShape = "Square",
+    })
+
+    OneScopeTab:Section({ Title = "One Scope Scripts", TextSize = 18 })
+
+    CreateScriptButton(OneScopeTab, "One Scope", "One Scope game script", "crosshair", "https://eclipsegames.org/api/scripts/universal_aimbot", "One Scope")
+end
+
+-------------------------------------------------------
+-- SORCERER TYCOON TAB
+-------------------------------------------------------
+do
+    local SorcTab = ScriptsSection:Tab({
+        Title     = "🧙 Sorcerer Tycoon",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#8B5CF6"),
+        IconShape = "Square",
+    })
+
+    SorcTab:Section({ Title = "Sorcerer Tycoon Scripts", TextSize = 18 })
+
+    CreateScriptButton(SorcTab, "Sorcerer Tycoon Boss Farm", "Auto boss farm for Sorcerer Tycoon", "zap", "https://raw.githubusercontent.com/unrexl/Scripts/refs/heads/main/BossFarmV6", "Sorcerer Tycoon")
+end
+
+-------------------------------------------------------
+-- SAILOR PIECE TAB
+-------------------------------------------------------
+do
+    local SailorTab = ScriptsSection:Tab({
+        Title     = "⚓ Sailor Piece",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#0EA5E9"),
+        IconShape = "Square",
+    })
+
+    SailorTab:Section({ Title = "Sailor Piece Scripts", TextSize = 18 })
+
+    CreateScriptButton(SailorTab, "Sailor Piece", "Sailor Piece script", "anchor", "https://codeberg.org/hubs/sailor/raw/branch/main/piece", "Sailor Piece")
+end
+
+-------------------------------------------------------
+-- MY KNIFE FARM TAB
+-------------------------------------------------------
+do
+    local KnifeFarmTab = ScriptsSection:Tab({
+        Title     = "🗡️ My Knife Farm",
+        Icon      = "gamepad-2",
+        IconColor = Color3.fromHex("#EF4444"),
+        IconShape = "Square",
+    })
+
+    KnifeFarmTab:Section({ Title = "My Knife Farm Scripts", TextSize = 18 })
+
+    CreateScriptButton(KnifeFarmTab, "My Knife Farm", "Auto knife farm script", "tool", "https://pastebin.com/raw/sZ3rMmP5", "My Knife Farm")
 end
 
 -------------------------------------------------------
@@ -417,7 +526,7 @@ end
 do
     local BrookTab = ScriptsSection:Tab({
         Title     = "🏠 Brookhaven",
-        Icon      = "home",
+        Icon      = "gamepad-2",
         IconColor = Color3.fromHex("#FF6B9D"),
         IconShape = "Square",
     })
@@ -433,7 +542,7 @@ end
 do
     local BFTab = ScriptsSection:Tab({
         Title     = "🍎 Blox Fruits",
-        Icon      = "star",
+        Icon      = "gamepad-2",
         IconColor = Color3.fromHex("#FF8C00"),
         IconShape = "Square",
     })
@@ -449,7 +558,7 @@ end
 do
     local DoorsTab = ScriptsSection:Tab({
         Title     = "🚪 DOORS",
-        Icon      = "square",
+        Icon      = "gamepad-2",
         IconColor = Color3.fromHex("#8B5CF6"),
         IconShape = "Square",
     })
@@ -465,7 +574,7 @@ end
 do
     local ArsenalTab = ScriptsSection:Tab({
         Title     = "🔫 Arsenal",
-        Icon      = "crosshair",
+        Icon      = "gamepad-2",
         IconColor = Red,
         IconShape = "Square",
     })
@@ -481,7 +590,7 @@ end
 do
     local RivalsTab = ScriptsSection:Tab({
         Title     = "⚔️ Rivals",
-        Icon      = "swords",
+        Icon      = "gamepad-2",
         IconColor = Red,
         IconShape = "Square",
     })
@@ -497,7 +606,7 @@ end
 do
     local FischTab = ScriptsSection:Tab({
         Title     = "🎣 Fisch",
-        Icon      = "anchor",
+        Icon      = "gamepad-2",
         IconColor = Blue,
         IconShape = "Square",
     })
@@ -520,11 +629,11 @@ do
 
     OtherTab:Section({ Title = "Other Game Scripts", TextSize = 18 })
 
-    CreateScriptButton(OtherTab, "Death Ball",              "Death Ball game script",       "circle",        "https://raw.githubusercontent.com/Urbanstormm/Project-Stark/main/Main.lua",               "Other")
-    CreateScriptButton(OtherTab, "The Forge [XMAS] (KEY)",  "The Forge Christmas edition",  "key",           "https://getastra.lol/loader.lua",                                                          "Other")
-    CreateScriptButton(OtherTab, "99 Nights in the Forest", "Horror hub script (KEY)",      "moon",          "https://raw.githubusercontent.com/Nicuse101/RobloxUtils/refs/heads/master/99NITF.lua",     "Other")
-    CreateScriptButton(OtherTab, "Scary Shawarma Kiosk",    "Horror anomaly script (KEY)",  "alert-triangle","https://raw.githubusercontent.com/hassanxzayn-lua/NEOXHUBMAIN/refs/heads/main/loader",     "Other")
-    CreateScriptButton(OtherTab, "Than Hub",                "Than hub utilities",           "tool",          "https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1",                  "Other")
+    CreateScriptButton(OtherTab, "Death Ball",              "Death Ball game script",      "circle",         "https://raw.githubusercontent.com/Urbanstormm/Project-Stark/main/Main.lua",              "Other")
+    CreateScriptButton(OtherTab, "The Forge [XMAS] (KEY)",  "The Forge Christmas edition", "key",            "https://getastra.lol/loader.lua",                                                         "Other")
+    CreateScriptButton(OtherTab, "99 Nights in the Forest", "Horror hub script (KEY)",     "moon",           "https://raw.githubusercontent.com/Nicuse101/RobloxUtils/refs/heads/master/99NITF.lua",    "Other")
+    CreateScriptButton(OtherTab, "Scary Shawarma Kiosk",    "Horror anomaly script (KEY)", "alert-triangle", "https://raw.githubusercontent.com/hassanxzayn-lua/NEOXHUBMAIN/refs/heads/main/loader",    "Other")
+    CreateScriptButton(OtherTab, "Than Hub",                "Than hub utilities",          "tool",           "https://raw.githubusercontent.com/thantzy/thanhub/refs/heads/main/thanv1",                 "Other")
 end
 
 -------------------------------------------------------
@@ -791,7 +900,7 @@ do
 end
 
 -------------------------------------------------------
--- INFO: DISCORD TAB (separate top-level section)
+-- INFO: DISCORD TAB
 -------------------------------------------------------
 do
     local DiscordTab = InfoSection:Tab({
@@ -854,7 +963,7 @@ do
 end
 
 -------------------------------------------------------
--- INFO: ABOUT TAB (separate top-level section)
+-- INFO: ABOUT TAB
 -------------------------------------------------------
 do
     local AboutTab = InfoSection:Tab({
