@@ -73,19 +73,6 @@ local Window = WindUI:CreateWindow({
 })
 
 -------------------------------------------------------
--- REMOVE LEAVE GAME BUTTONS
--------------------------------------------------------
-task.spawn(function()
-    local function removeLeave(btn)
-        if btn and (btn.Name == "LeaveGameButton" or btn.Name == "DontLeaveGameButton") then
-            pcall(function() btn:Destroy() end)
-        end
-    end
-    for _, v in ipairs(CoreGui:GetDescendants()) do removeLeave(v) end
-    CoreGui.DescendantAdded:Connect(removeLeave)
-end)
-
--------------------------------------------------------
 -- SECTIONS
 -------------------------------------------------------
 local ScriptsSection = Window:Section({ Title = "📁 Scripts" })
