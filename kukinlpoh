@@ -387,12 +387,16 @@ do
 
     BrainrotTab:Section({ Title = "Steal a Brainrot Scripts", TextSize = 18 })
 
-    CreateScriptButton(BrainrotTab, "(UNPATCHED) Auto Moreiera 1", "Make bots full of high tier brainrots join your private server.", "bot",    "", "Steal a Brainrot")
-    CreateScriptButton(BrainrotTab, "(UNPATCHED) Auto Moreiera 2", "Make bots full of high tier brainrots join your private server.", "bot",    "", "Steal a Brainrot")
-    CreateScriptButton(BrainrotTab, "Trax Brainrot Spawner (KEY)", "Spawn your very own brainrots!",                                  "key",    "", "Steal a Brainrot")
-    CreateScriptButton(BrainrotTab, "Rift Hub (KEYLESS)",          "OP Script hub for SAB",                                           "layers", "", "Steal a Brainrot")
-    CreateScriptButton(BrainrotTab, "Chili Hub (KEYLESS)",         "Script hub with Powerful Desync",                                 "flame",  "", "Steal a Brainrot")
-    CreateScriptButton(BrainrotTab, "Lemon Hub (KEYLESS)",         "Good desync for SAB PvP",                                         "circle", "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Nova Duels Premium",             "Nova Duels Premium script",                                       "star",   "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Nova%20Duels",     "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "K67 Mini Hub",                   "K67 Mini Hub script",                                             "layers", "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/K67%20Mini%20Hub",  "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Ghost Duels Premium",            "Ghost Duels Premium script",                                      "ghost",  "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/Ghost%20Duels",     "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Desync + more",                  "Desync and more features",                                        "zap",    "https://raw.githubusercontent.com/jazzedd/Scripts/refs/heads/main/desync",            "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "(UNPATCHED) Auto Moreiera 1",    "Make bots full of high tier brainrots join your private server.", "bot",    "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "(UNPATCHED) Auto Moreiera 2",    "Make bots full of high tier brainrots join your private server.", "bot",    "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Trax Brainrot Spawner (KEY)",    "Spawn your very own brainrots!",                                  "key",    "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Rift Hub (KEYLESS)",             "OP Script hub for SAB",                                           "layers", "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Chili Hub (KEYLESS)",            "Script hub with Powerful Desync",                                 "flame",  "", "Steal a Brainrot")
+    CreateScriptButton(BrainrotTab, "Lemon Hub (KEYLESS)",            "Good desync for SAB PvP",                                         "circle", "", "Steal a Brainrot")
 end
 
 -------------------------------------------------------
